@@ -3,6 +3,8 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     colors: {
+      white: "hsl(0, 0%, 100%)",
+      black: "hsl(0, 0%, 0%)",
       red: "hsl(14, 86%, 42%)",
       green: "hsl(159, 69%, 38%)",
       rose: {

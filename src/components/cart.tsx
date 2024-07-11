@@ -12,7 +12,7 @@ export default memo(function Cart() {
 
   return (
     <>
-      <div className="bg-rose-50 p-6 rounded-2xl flex flex-col gap-4 md:w-96">
+      <div className="bg-white p-6 rounded-2xl flex flex-col gap-4 md:w-96">
         <h2 className="text-heading-md text-red font-bold">Your Cart ({state.items.length})</h2>
         {state.items.length > 0 ? (
           <div className="flex flex-col gap-6">
@@ -131,7 +131,7 @@ export default memo(function Cart() {
           </div>
         )}
       </div>
-      {showConfirmation && <ConfirmationModal />}
+      {showConfirmation && <ConfirmationModal setShowConfirmation={setShowConfirmation} />}
     </>
   );
 });

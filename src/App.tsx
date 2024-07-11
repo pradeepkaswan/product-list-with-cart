@@ -8,8 +8,8 @@ export default function App() {
 
   return (
     <CartProvider>
-      <div className="flex flex-col gap-6 | md:flex-row">
-        <div>
+      <div className="flex flex-col | md:flex-row">
+        <div className="mb-6">
           <h1 className="text-heading-lg font-bold mb-6">Desserts</h1>
           <DessertList desserts={desserts} />
         </div>

@@ -32,10 +32,10 @@ function DessertItem({ dessert }: { dessert: Dessert }) {
   }, [cartItem, dispatch]);
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 | md:w-[250px]">
       <div className="flex flex-col items-center">
         <div
-          className={`-mb-6 overflow-hidden ${cartItem ? "border-2 rounded-xl border-red" : ""}`}>
+          className={`-mb-6 overflow-hidden  rounded-xl ${cartItem ? "border-2 border-red" : ""}`}>
           <picture>
             <source media="(min-width: 1024px)" srcSet={dessert.image.desktop} />
             <source media="(min-width: 768px)" srcSet={dessert.image.tablet} />
@@ -83,7 +83,7 @@ function DessertItem({ dessert }: { dessert: Dessert }) {
         ) : (
           <button
             onClick={() => addToCart(dessert)}
-            className="flex items-center gap-2 border font-semibold text-body-sm px-6 w-40 h-11 rounded-full border-rose-400 bg-rose-50 text-rose-900 hover:border-red hover:text-red">
+            className="flex items-center gap-2 border font-semibold text-body-sm px-6 w-40 h-11 rounded-full border-rose-400 bg-white text-rose-900 hover:border-red hover:text-red">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="21"
@@ -115,7 +115,7 @@ function DessertItem({ dessert }: { dessert: Dessert }) {
 
 export default function DessertList({ desserts }: { desserts: Dessert[] }) {
   return (
-    <div className="flex flex-col gap-4 | md:flex-row flex-wrap">
+    <div className="flex flex-col gap-4 | md:flex-row  flex-wrap">
       {desserts.map((dessert) => (
         <DessertItem key={dessert.name} dessert={dessert} />
       ))}

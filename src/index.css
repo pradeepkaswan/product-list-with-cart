@@ -22,6 +22,6 @@
 
 @layer base {
   body {
-    @apply bg-rose-100 text-rose-900 p-6;
+    @apply bg-rose-50 text-rose-900 p-6 lg:p-28;
   }
 }
